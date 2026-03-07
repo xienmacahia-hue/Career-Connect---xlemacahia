@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors & Organizations - Career Connect</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Career Connect</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="mentors.html">Mentors & Organizations</a></li>
+        <li><a href="contact.html">Contact Inquiry</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h2>Meet Our Mentors & Partner Organizations</h2>
+    <p>
+      Career Connect collaborates with experienced professionals and community organizations
+      to guide students and young professionals in their career journey.
+      Explore profiles and discover opportunities to learn from the best.
+    </p>
+  </header>
+
+  <section class="profiles">
+    <h2>Featured Mentors</h2>
+    <div class="profile-grid">
+      <div class="profile-card">
+        <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg" alt="Mentor in Technology">
+        <h3>Maria Santos</h3>
+        <p>IT Specialist guiding students in web development and digital careers.</p>
+      </div>
+      <div class="profile-card">
+        <img src="https://images.pexels.com/photos/936137/pexels-photo-936137.jpeg" alt="Mentor in Business">
+        <h3>John Reyes</h3>
+        <p>Business consultant offering mentorship in entrepreneurship and leadership.</p>
+      </div>
+      <div class="profile-card">
+        <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg" alt="Mentor in Education">
+        <h3>Angela Cruz</h3>
+        <p>Educator supporting students with study strategies and academic growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Partner Organizations</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg" alt="Community Library">
+        <div class="overlay">
+          <h3>Community Library</h3>
+          <p>A local library providing free access to books, study spaces, and literacy programs.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg" alt="Youth Advocacy Group">
+        <div class="overlay">
+          <h3>Youth Advocacy Group</h3>
+          <p>Empowering young people through leadership training and community projects.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg" alt="Environmental Organization">
+        <div class="overlay">
+          <h3>Environmental Organization</h3>
+          <p>Promoting sustainability and environmental awareness through campaigns and clean-ups.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg" alt="Local Health Center">
+        <div class="overlay">
+          <h3>Local Health Center</h3>
+          <p>Providing accessible healthcare services and wellness programs to the community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Site Map: Home | Opportunities | Mentors & Organizations | Contact Inquiry | About Us</p>
+    <p>Developer: Xienna Louise E. Macahia</p>
+    <p>Course & Section: ITS121-1L – BM14</p>
+    <p>School Year: 2025–2026</p>
+  </footer>
+
+</body>
+</html>

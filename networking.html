@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Networking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="networking-page">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Career Connect</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="mentors.html">Mentors & Organizations</a></li>
+                <li><a href="contact.html">Contact Inquiry</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<header class="hero" style="background:linear-gradient(rgba(51,51,51,0.7),rgba(51,51,51,0.7)), url('images/networking-banner.jpg') center/cover no-repeat;">
+        <h2>Networking</h2>
+        <p>
+            Networking helps students build professional connections, learn from mentors,
+            and discover career opportunities. Strong relationships can open doors to growth and success.
+        </p>
+    </header>
+
+    <section class="network-section">
+
+        <div class="network-columns">
+
+            <div class="network-info">
+                <h3>Why Networking Matters</h3>
+<p>
+    Networking allows you to meet professionals, exchange ideas, and gain insights
+    about different industries. It helps you grow beyond classroom learning and
+    discover opportunities you might not find on your own. Many careers are built
+    on relationships as much as skills, and networking helps you build those connections.
+    It can open doors to internships, mentorships, and future job opportunities.
+</p>
+
+<p>
+    Building connections does not mean asking for favors right away. It is about
+    learning from others, sharing knowledge, and creating professional relationships
+    over time. Even small conversations can lead to meaningful opportunities.
+</p>
+
+<h3>How to Network Effectively</h3>
+<ul>
+    <li>Attend career events and seminars</li>
+    <li>Connect with professionals on LinkedIn (great for career networking)</li>
+    <li>Practice introducing yourself with confidence</li>
+    <li>Follow up after meetings to keep connections alive</li>
+    <li>Be curious and ask questions about others’ experiences</li>
+    <li>Offer value—networking is about mutual growth</li>
+    <li>Stay consistent and nurture professional relationships</li>
+</ul>
+            </div>
+
+            <div class="network-cards">
+
+                <div class="network-card">
+                    <img src="images/networking-1.jpg" class="lightbox-trigger" alt="Networking Event">
+                    <h4>Industry Meetups</h4>
+                    <p>Local events where students can meet professionals and learn about careers.</p>
+                </div>
+
+                <div class="network-card">
+                    <img src="images/networking-2.jpg" class="lightbox-trigger" alt="Online Networking">
+                    <h4>Online Networking</h4>
+                    <p>Use professional platforms to connect with mentors and industry experts.</p>
+                </div>
+
+                <div class="network-card">
+                    <img src="images/networking-3.jpg" class="lightbox-trigger" alt="Career Group">
+                    <h4>Career Groups</h4>
+                    <p>Join communities focused on learning and professional growth.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="network-events">
+        <h2>Upcoming Networking Events</h2>
+
+        <div class="event-grid">
+
+            <div class="event-card">
+                <img src="images/networking-4.jpg" class="lightbox-trigger" alt="Career Networking">
+                <h3>Career Networking Night</h3>
+                <p>Meet professionals and students in different industries.</p>
+                <span class="event-date">March 20, 2026</span>
+            </div>
+
+            <div class="event-card">
+                <img src="images/networking-5.jpg" class="lightbox-trigger" alt="LinkedIn Workshop">
+                <h3>LinkedIn Profile Workshop</h3>
+                <p>Learn how to create a strong professional online presence.</p>
+                <span class="event-date">April 5, 2026</span>
+            </div>
+
+            <div class="event-card">
+                <img src="images/networking-6.jpg" class="lightbox-trigger" alt="Tech Talk">
+                <h3>Industry Talk: Tech Careers</h3>
+                <p>Professionals share insights about working in the tech industry.</p>
+                <span class="event-date">April 18, 2026</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="network-tips">
+        <h2>Quick Networking Tips</h2>
+
+        <div class="tips-grid">
+
+            <div class="tip-card">
+                <h4>Be Genuine</h4>
+                <p>Focus on building real relationships instead of just asking for favors.</p>
+            </div>
+
+            <div class="tip-card">
+                <h4>Follow Up</h4>
+                <p>Send a short message after meetings to keep connections alive.</p>
+            </div>
+
+            <div class="tip-card">
+                <h4>Ask Questions</h4>
+                <p>Show interest by learning from others' experiences.</p>
+            </div>
+
+            <div class="tip-card">
+                <h4>Stay Active</h4>
+                <p>Engage in communities and events regularly.</p>
+            </div>
+
+        </div>
+    </section>
+
+  <footer class="footer">
+    <p>Site Map: Home | Opportunities | Mentors & Organizations | Contact Inquiry | About Us</p>
+      <p>Developer: Xienna Louise E. Macahia</p>
+    <p>Course & Section: ITS121-1L – BM14</p>
+    <p>School Year: 2025–2026</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Lightbox Image">
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".lightbox-close");
+
+        document.querySelectorAll(".lightbox-trigger").forEach(img => {
+            img.addEventListener("click", function () {
+                lightbox.style.display = "flex";
+                lightboxImg.src = this.src;
+            });
+        });
+
+        closeBtn.addEventListener("click", function () {
+            lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", function (e) {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

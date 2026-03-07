@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internships - Career Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="internships-page">
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Career Connect</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="opportunities.html">Opportunities</a></li>
+        <li><a href="mentors.html">Mentors & Organizations</a></li>
+        <li><a href="contact.html">Contact Inquiry</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<header class="hero" style="background:linear-gradient(rgba(51,51,51,0.7),rgba(51,51,51,0.7)), url('images/internships-banner.jpg') center/cover no-repeat;">
+    <h2>Internships</h2>
+    <p>Discover exciting community-based internships you can join.</p>
+  </header>
+
+  <section class="internship-list">
+    <h2 class="internship-heading">Available Internship Roles</h2>
+
+    <div class="internship">
+      <img src="images/internships-ITsupport.jpg" alt="IT Support" class="internship-image">
+      <h3>IT Support Intern</h3>
+      <button class="toggle-btn">View Details</button>
+      <div class="details">
+        <p><strong>Duration:</strong> 3 months</p>
+        <p><strong>Location:</strong> Barangay Tech Center</p>
+        <p><strong>Description:</strong> Assist with troubleshooting, software installation, and community tech workshops.</p>
+      </div>
+    </div>
+
+    <div class="internship">
+      <img src="images/internships-Comhealth.jpg" alt="Community Health" class="internship-image">
+      <h3>Community Health Intern</h3>
+      <button class="toggle-btn">View Details</button>
+      <div class="details">
+        <p><strong>Duration:</strong> 2 months</p>
+        <p><strong>Location:</strong> Local Health Center</p>
+        <p><strong>Description:</strong> Support health awareness campaigns and assist medical staff in outreach programs.</p>
+      </div>
+    </div>
+
+    <div class="internship">
+      <img src="images/internships-Libassistant.jpg" alt="Library Assistant" class="internship-image">
+      <h3>Library Assistant Intern</h3>
+      <button class="toggle-btn">View Details</button>
+      <div class="details">
+        <p><strong>Duration:</strong> 1 month</p>
+        <p><strong>Location:</strong> Public Library</p>
+        <p><strong>Description:</strong> Help organize books, assist visitors, and run literacy workshops for children.</p>
+      </div>
+    </div>
+
+    <div class="internship">
+      <img src="images/internships-Enadvocacy.jpg" alt="Environmental Advocacy" class="internship-image">
+      <h3>Environmental Advocacy Intern</h3>
+      <button class="toggle-btn">View Details</button>
+      <div class="details">
+        <p><strong>Duration:</strong> 2 months</p>
+        <p><strong>Location:</strong> Community Garden</p>
+        <p><strong>Description:</strong> Promote recycling, urban gardening, and sustainability awareness in the community.</p>
+      </div>
+    </div>
+
+    <div class="internship">
+      <img src="images/internships-Eventplan.jpg" alt="Event Planning" class="internship-image">
+      <h3>Event Planning Intern</h3>
+      <button class="toggle-btn">View Details</button>
+      <div class="details">
+        <p><strong>Duration:</strong> 3 months</p>
+        <p><strong>Location:</strong> Barangay Hall</p>
+        <p><strong>Description:</strong> Assist in organizing community events, workshops, and networking sessions.</p>
+      </div>
+    </div>
+
+    <div class="internship">
+      <img src="images/internships-Socmed.jpg" alt="Social Media Marketing" class="internship-image">
+      <h3>Social Media Marketing Intern</h3>
+      <button class="toggle-btn">View Details</button>
+      <div class="details">
+        <p><strong>Duration:</strong> 2 months</p>
+        <p><strong>Location:</strong> Remote / Online</p>
+        <p><strong>Description:</strong> Help manage social media content and learn digital marketing strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Site Map: Home | Opportunities | Mentors & Organizations | Contact Inquiry | About Us</p>
+    <p>Developer: Xienna Louise E. Macahia</p>
+    <p>Course & Section: ITS121-1L – BM14</p>
+    <p>School Year: 2025–2026</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.toggle-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const internship = btn.parentElement;
+        internship.classList.toggle('active');
+
+        if (internship.classList.contains('active')) {
+          btn.textContent = "Hide Details";
+        } else {
+          btn.textContent = "View Details";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
