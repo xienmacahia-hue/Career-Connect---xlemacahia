@@ -1,0 +1,899 @@
+/* =========================================================
+   COLOR VARIABLES
+   ========================================================= */
+:root {
+  --primary: #333333;
+  --secondary: #d3d3d3;
+  --accent: #FFA500;
+  --background: #ffffff;
+  --highlight: #FFD700;
+}
+
+
+/* =========================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.navbar {
+  background-color: var(--primary);
+  padding: 15px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   HERO BANNER
+   ========================================================= */
+.hero {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(rgba(51,51,51,0.7), rgba(51,51,51,0.7)),
+              url("images/banner-career.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  background-color: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   OPPORTUNITIES SECTION
+   ========================================================= */
+.opportunities {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--secondary);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-learn {
+  background-color: var(--highlight);
+  color: var(--primary);
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.btn-learn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-learn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   CAROUSEL (HOME PAGE SLIDER)
+   ========================================================= */
+.carousel {
+  padding: 40px;
+  text-align: center;
+}
+
+.carousel h3 {
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  background: linear-gradient(135deg, #e0e0e0, #f9f9f9);
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 300px;
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+.slide img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.slide p {
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  background-color: var(--secondary);
+  text-align: center;
+  padding: 20px;
+  color: var(--primary);
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+
+/* =========================================================
+   SERVICE PAGES (GENERAL)
+   ========================================================= */
+.service-content {
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.service-content h3 {
+  color: var(--accent);
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.service-content p,
+.service-content ul,
+.service-content table {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.service-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.service-content table th,
+.service-content table td {
+  border: 1px solid var(--secondary);
+  padding: 12px;
+  text-align: center;
+}
+
+.service-content table th {
+  background-color: var(--highlight);
+  color: var(--primary);
+}
+
+.service-content table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* =========================================================
+   INTERNSHIPS PAGE
+   ========================================================= */
+.internships-page {
+  background: linear-gradient(135deg, #f4f4f4, #e9e9e9);
+}
+
+.internship-list {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Heading (full width) */
+.internship-heading {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.internship-heading::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--accent);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* Card (grid style) */
+.internship {
+  background: var(--secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.internship:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* Image fits card */
+.internship-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title and spacing */
+.internship h3 {
+  padding: 15px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Button */
+.toggle-btn {
+  display: block;
+  width: 100%;
+  background: var(--highlight);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Details dropdown */
+.details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.internship.active .details {
+  max-height: 300px;
+  padding: 0 15px 15px;
+}
+
+/* =========================================================
+   WORKSHOPS PAGE
+   ========================================================= */
+.workshops-page {
+  background: linear-gradient(135deg, #f4f4f4, #e9e9e9);
+}
+
+.workshops-section {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Workshop Card */
+.workshop-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.workshop-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.workshop-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.workshop-content {
+  flex: 1;
+}
+
+.workshop-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.workshop-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.workshop-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.organizer {
+  font-weight: 600;
+}
+
+.tag {
+  background: #e5e7eb;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.location {
+  font-size: 13px;
+  color: #666;
+}
+
+.workshop-date {
+  font-size: 13px;
+  color: #888;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NETWORKING PAGE
+   ========================================================= */
+.networking-page {
+  background: linear-gradient(135deg, #f4f4f4, #e9e9e9);
+}
+
+.network-section {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.network-columns {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.network-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.network-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.network-info ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* Cards Column */
+.network-cards {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.network-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  transition: 0.3s ease;
+}
+
+.network-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.network-card h4 {
+  margin-bottom: 8px;
+}
+
+/* Smaller Images (NEW) */
+.network-card img,
+.event-card img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Networking Events */
+.network-events {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.network-events h2 {
+  margin-bottom: 20px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.event-card h3 {
+  margin-bottom: 10px;
+}
+
+.event-date {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Networking Tips */
+.network-tips {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.tip-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.tip-card h4 {
+  margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.network-card img,
+.event-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 1024px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .service-content {
+    padding: 20px;
+  }
+
+  .service-content table {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .service-content {
+    padding: 15px;
+  }
+
+  .service-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-content table,
+  .service-content ul {
+    font-size: 0.9rem;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  .workshops-section,
+  .network-section,
+  .network-events {
+    width: 95%;
+  }
+}
+
+/* ============================= */
+/* MENTORS PAGE */
+/* ============================= */
+
+.profiles {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.profile-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  width: 250px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* add transition */
+}
+
+.profile-card img:hover {
+  transform: scale(1.08); /* zoom effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.profile-card img,
+.gallery-item img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card img:hover,
+.gallery-item img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+.contact-section,
+.feedback-section {
+  width: 85%;
+  margin: 50px auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form,
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label,
+.feedback-form label {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.contact-form input,
+.contact-form textarea,
+.feedback-form select,
+.feedback-form textarea {
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.btn-submit {
+  background-color: var(--highlight);
+  color: var(--primary);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Social Media Links */
+.social-media {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+  background: var(--secondary);
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* =========================================================
+   ABOUT US
+   ========================================================= */
+.profiles h2 {
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.profile-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.profile-card img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
